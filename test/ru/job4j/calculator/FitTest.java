@@ -14,6 +14,6 @@ public class FitTest {
 
     @Test
     public void whenWoman180Then92() {
-        Assert.assertEquals(88, Fit.womanWeight((short) 180), 0.01);
+        Assert.assertEquals(80.5, Fit.womanWeight((short) 180), 0.01);
     }
 }
