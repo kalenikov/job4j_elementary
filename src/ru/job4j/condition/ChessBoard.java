@@ -5,9 +5,7 @@ public class ChessBoard {
         int rsl = 0;
         int dx = Math.abs(x2 - x1);
         int dy = Math.abs(y2 - y1);
-        if (dx == dy) {
-            rsl = Math.max(dx, dy);
-        }
+        rsl = dx == dy ? dx : rsl;
         return rsl;
     }
 }
