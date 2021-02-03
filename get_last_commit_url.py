@@ -10,6 +10,6 @@ response = urlopen(url).read()
 data = json.loads(response.decode())
 
 for commit in data:
+    print('--------------')
+    print(commit['commit']['message'], commit['commit']['author']["date"])
     print(commit['html_url'])
-    print(commit['commit']['message'])
-    print(commit['commit']['author']["date"])
