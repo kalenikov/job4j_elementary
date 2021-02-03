@@ -1,5 +1,6 @@
 *.class
 /src/ru/job4j/Testing.java
+/.gradle
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
