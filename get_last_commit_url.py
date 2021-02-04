@@ -11,5 +11,6 @@ data = json.loads(response.decode())
 
 for commit in data:
     print('--------------')
-    print(commit['commit']['message'], commit['commit']['author']["date"])
-    print(commit['html_url'])
+    # print(commit['commit']['message'], commit['commit']['author']["date"])
+    print(commit['commit']['message'], commit['html_url'])
+    # print(commit['html_url'])
