@@ -4,7 +4,7 @@ import json
 owner = "kalenikov"
 repo = "job4j_elementary"
 
-url = f'https://api.github.com/repos/{owner}/{repo}/commits?per_page=3'
+url = f'https://api.github.com/repos/{owner}/{repo}/commits?per_page=10'
 
 response = urlopen(url).read()
 data = json.loads(response.decode())
