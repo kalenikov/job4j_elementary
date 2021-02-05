@@ -11,11 +11,20 @@ public class MatrixCheck {
     }
 
     public static boolean monoVertical(char[][] board, int column) {
-         for (char[] row : board) {
+        for (char[] row : board) {
             if (row[column] != 'X') {
                 return false;
             }
         }
         return true;
+    }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+
+        return rsl;
     }
 }

@@ -40,7 +40,7 @@ public class MatrixCheckTest {
         assertThat(result, is(true));
     }
 
-      @Test
+    @Test
     public void whenHasNoMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
@@ -49,5 +49,17 @@ public class MatrixCheckTest {
         };
         boolean result = MatrixCheck.monoVertical(input, 2);
         assertThat(result, is(false));
+    }
+
+    @Test
+    public void whenDiagonal() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expect = {'X', 'X', 'X'};
+        assertThat(result, is(expect));
     }
 }
