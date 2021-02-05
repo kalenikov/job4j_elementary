@@ -1,6 +1,7 @@
 *.class
 /src/ru/job4j/Testing.java
 /.gradle
+get_last_commit_url.py
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
