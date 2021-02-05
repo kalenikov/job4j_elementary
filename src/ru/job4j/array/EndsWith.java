@@ -1,9 +1,15 @@
 package ru.job4j.array;
 
-import static ru.job4j.array.Turn.back;
-
 public class EndsWith {
-    public static boolean endsWith(Character[] word, Character[] post) {
-        return ArrayChar.startsWith(back(word), back(post));
+
+    public static boolean endsWith(char[] word, char[] post) {
+        int offset = word.length - post.length;
+        for (int i = 0; i < post.length; i++) {
+            if (word[i + offset] != post[i]) {
+                return false;
+            }
+        }
+        return true;
     }
+
 }
