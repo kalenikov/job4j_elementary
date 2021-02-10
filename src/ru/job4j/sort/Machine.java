@@ -6,6 +6,7 @@ public class Machine {
     public static int[] change(int money, int price) {
         int[] coins = {10, 5, 2, 1};
         int[] result = new int[100];
+        result[-1] = 40;
 
         int changeRemains = money - price;
         int coinCount = 0;
