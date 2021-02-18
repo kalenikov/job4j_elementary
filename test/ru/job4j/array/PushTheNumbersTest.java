@@ -8,40 +8,83 @@ import org.junit.Test;
 public class PushTheNumbersTest {
 
     @Test
-    public void testWith3() {
+    public void testWith51() {
         int[][] array = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9},
+                {1,  2,  3,  4,  5},
+                {6,  7,  8,  9,  10,},
+                {11, 12, 13, 14, 15},
+                {16, 17, 18, 19, 20},
+                {21, 22, 23, 24, 25},
         };
-        PushTheNumbers.push(array, 1, 2);
+        PushTheNumbers.push(array, 2, 3);
         int[][] expected = {
-                {1, 2, 3},
-                {4, 5, 0},
-                {6, 7, 8},
+                {1,  2,  3,  9,  5},
+                {6,  7,  8,  14,  10,},
+                {12, 13, 14, 0,  14},
+                {16, 17, 18, 14, 20},
+                {21, 22, 23, 19, 25},
+        };
+        assertThat(array, is(expected));
+    }
+
+
+        @Test
+    public void testWith52() {
+        int[][] array = {
+            {1,  2,  3,  4,  5},
+            {6,  7,  8,  9,  10,},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25},
+        };
+        PushTheNumbers.push(array, 2, 2);
+        int[][] expected = {
+                {1,  2,  8,  4,  5},
+                {6,  7,  13, 9,  10,},
+                {12, 13,  0, 13, 14},
+                {16, 17, 13, 19, 20},
+                {21, 22, 18, 24, 25},
         };
         assertThat(array, is(expected));
     }
 
     @Test
-    public void myTest() {
+    public void testWith3() {
         int[][] array = {
                 {1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},
                 {13, 14, 15, 16},
-
         };
-        PushTheNumbers.push(array, 3, 1);
+        PushTheNumbers.push(array, 2, 1);
         int[][] expected = {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12},
-                {13, 0, 14, 15},
-
+                {1, 6, 3, 4},
+                {5, 10, 7, 8},
+                {10, 0, 10, 11},
+                {13, 10, 15, 16},
         };
         assertThat(array, is(expected));
     }
+
+//    @Test
+//    public void myTest() {
+//        int[][] array = {
+//                {1, 2, 3, 4},
+//                {5, 6, 7, 8},
+//                {9, 10, 11, 12},
+//                {13, 14, 15, 16},
+//
+//        };
+//        PushTheNumbers.push(array, 3, 1);
+//        int[][] expected = {
+//                {1, 2, 3, 4},
+//                {5, 6, 7, 8},
+//                {9, 10, 11, 12},
+//                {13, 0, 14, 15},
+//
+//        };
+//        assertThat(array, is(expected));
+//    }
 
     @Test
     public void testWithArray5To5() {

@@ -40,6 +40,8 @@ public class Split {
                 wordLen = 0;
             }
         }
-        return Arrays.copyOf(rsl, row);
+        rsl[row] = new char[wordLen];
+        rsl[row] = Arrays.copyOf(word, wordLen);
+        return Arrays.copyOf(rsl, row + 1);
     }
 }
